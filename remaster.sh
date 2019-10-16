@@ -13,7 +13,7 @@ if [ "$#" != "1" ]; then
 fi
 
 readonly prefix="UMac"
-readonly iso_path="$1"
+readonly iso_path="$(realpath $1)"
 readonly iso_file="$(basename "$iso_path")"
 readonly tmp_mount="$(mktemp -d)"
 readonly tmp_dir="$(mktemp -d)"
